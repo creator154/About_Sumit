@@ -1,67 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sumit — @ItzCreator</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumit | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- LOADER -->
-  <div class="loading" aria-hidden="true">
-    <div class="loader-circle"></div>
-    <div class="loader-bar"><div class="progress"></div></div>
-    <p class="loading-text">LOADING…</p>
-  </div>
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <div class="ring"></div>
+    <p class="load-text">LOADING...</p>
+</div>
 
-  <!-- MAIN CONTENT -->
-  <main class="main" style="display:none;">
-    <section class="card">
-      <div class="avatar-wrap">
-        <div class="avatar-border">
-          <!-- Try local image first, fall back to hosted if missing -->
-          <img id="profileImg" src="./IMG_20251210_205101_941.jpg"
-               alt="Sumit" onerror="this.onerror=null;this.src='https://files.catbox.moe/8vn4sn.jpg'">
-        </div>
-      </div>
+<!-- MAIN CONTENT -->
+<div id="main" style="display:none;">
 
-      <h1 class="name">Sumit <span class="age">· 20</span></h1>
-      <p class="handle">@ItzCreator</p>
+    <div class="top">
+        <img src="sumit.jpg" class="profile">
+        <h1 class="name">SUMIT <span>( @ItzCreator )</span></h1>
+        <p class="tag">Web Developer • Editor • Creator</p>
+    </div>
 
-      <div class="btn-row">
-        <a class="vikky-btn" href="https://t.me/+CpfvklAFQLgwYTY1" target="_blank" rel="noopener noreferrer">
-          JOIN MY CHANNEL
-        </a>
-        <a class="ghost-btn" href="https://t.me/ItzCreator" target="_blank" rel="noopener noreferrer">
-          DM Me
-        </a>
-      </div>
+    <div class="btn-box">
+        <a href="https://t.me/+CpfvklAFQLgwYTY1" class="btn left">JOIN MY CHANNEL</a>
+        <a href="https://t.me/+CpfvklAFQLgwYTY1" class="btn right">DM ME</a>
+    </div>
 
-      <div class="section about">
-        <h2>About Me</h2>
-        <p>I am Sumit — a passionate web developer, video editor & digital creator. I build small websites and share content on my Telegram channel.</p>
-      </div>
+    <div class="about">
+        <h2>ABOUT ME</h2>
+        <p>
+            Hey! I'm Sumit, 20 years old.  
+            A passionate web developer, editor and digital creator.  
+            I love building websites, automations & premium styled UI designs.
+        </p>
+    </div>
 
-      <div class="section skills">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Editing</span>
-          <span class="chip">UI Design</span>
-        </div>
-      </div>
+</div>
 
-      <footer class="footer">
-        © <span id="year"></span> Sumit — Made with ♥
-      </footer>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-    </html>
+</html>
