@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sumit</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumit – Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- LOADER -->
-    <div class="loading">
-        <div class="circle"></div>
-        <h2>LOADING…</h2>
+    <!-- LOADING SCREEN -->
+    <div id="loading">
+        <h1>LOADING...</h1>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main hidden">
+    <div id="main-content" style="display:none">
+
+        <!-- HEADER -->
         <header>
-            <h1>Sumit</h1>
-            <p>Web Developer • Creator</p>
+            <img src="your-photo.jpg" class="profile" alt="Profile">
+            <h1 class="name">SUMIT</h1>
         </header>
 
-        <section>
-            <h2>About Me</h2>
+        <!-- BUTTONS -->
+        <div class="btn-container">
+            <a href="https://t.me/+CpfvklAFQLgwYTY1" class="btn pink">JOIN MY CHANNEL</a>
+            <a href="https://t.me/creator154" class="btn blue">DM ME ON TELEGRAM</a>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <section class="section">
+            <h2 class="title">ABOUT ME</h2>
             <p>
-                Hi, I'm Sumit — a developer who loves building clean websites.
+                Hi! I'm Sumit — a developer who loves building clean websites and projects.  
+                I enjoy learning new things every day and exploring design + development.
             </p>
         </section>
 
-        <section>
-            <h2>Skills</h2>
-            <ul>
+        <!-- SKILLS -->
+        <section class="section">
+            <h2 class="title">MY SKILLS</h2>
+            <ul class="skills">
                 <li>HTML / CSS / JS</li>
                 <li>Editing</li>
                 <li>UI Design</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <a href="https://t.me/ItzCreator" class="btn" target="_blank">Telegram</a>
+        <!-- CONTACT -->
+        <section class="section">
+            <h2 class="title">CONTACT</h2>
+            <a class="contact-link" href="https://t.me/creator154">Telegram</a>
         </section>
     </div>
 
     <script>
-        setTimeout(() => {
-            document.querySelector(".loading").style.display = "none";
-            document.querySelector(".main").classList.remove("hidden");
-        }, 2000);
+        // LOADING SCREEN
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 1000);
+        };
     </script>
 
 </body>
