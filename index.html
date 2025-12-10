@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0b0b0b;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Loader Screen */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 22px;
+            z-index: 999;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #333;
+            border-top: 6px solid #00d0ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Main Content */
+        #main {
+            display: none;
+            padding: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00d0ff;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 30px;
+        }
+
+        p {
+            opacity: 0.8;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: block;
+            width: 80%;
+            max-width: 250px;
+            margin: 15px auto;
+            padding: 12px;
+            background: #00d0ff;
+            color: black;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+    <script>
+        // Loader hide after 2 seconds
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("main").style.display = "block";
+            }, 2000);
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        Loading…
+    </div>
+
+    <!-- Main Portfolio -->
+    <div id="main">
+        <img src="https://files.catbox.moe/a89zz4.jpg" class="profile-img">
+        <h1>ItzCreator</h1>
+        <p>Welcome to my official page.</p>
+
+        <a href="https://t.me/+CpfvklAFQLgwYTY1" class="btn">Join My Channel</a>
+        <a href="https://t.me/ItzCreator" class="btn">Message Me</a>
+    </div>
+
+</body>
+</html>
